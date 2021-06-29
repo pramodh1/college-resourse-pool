@@ -1,0 +1,138 @@
+ {% load static %}
+ <main class="home">
+    <div class="top" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+    {% for slide in slider %}
+      <div class="top-banner">
+        <img src=" {{ slide.photo.url }} " alt="" >
+        <div id="a" class="top-container d-flex flex-column pl-5">
+          <h1>
+            {{slide.hline}}
+          </h1>
+          <p>
+           {{slide.subline}}
+          </p>
+          <div>
+            <a href="{{slide.link}}"><button class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">
+              {{slide.buttontxt}}
+             </button></a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    
+
+    </div>
+       <div class="col-md-4 offset-md-4">
+{% include 'accounts/messages.html'%}
+    
+    </div>
+
+    <section class="container d-flex justify-content-center align-items-center mt-4">
+      <form  method="GET" action="{% url 'search' %}"  class="row text-center">
+        <div class="col-md-auto">
+          <div class="form-group mb-2">
+            <input   name="keyword" class="form-control" placeholder="Enter Keywords">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-accent ml-2 mb-2 pl-5 pr-5">Search</button>
+
+          </div>
+        </div>
+      </form>
+    </section>
+    <style>
+      #a{
+        color: whitesmoke;
+      }
+      .top-banner img{
+        opacity: 70%;
+      }
+      </style>
+      
+    <section class="container mt-3">
+      <h3 class="text-center">Featured Courses</h3>
+      <p class="pt-2 pb-3 text-center">profesers that did extra ordinary last month</p>
+      <div class="team slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+<!-- person 1 -->
+        {% for i in flessons %}
+        
+        <div class="card border-0 text-center ml-3 mr-3">
+          <div class="feature-text">
+            <a href="{% url 'tubersdetails' i.id %}"><img src="{{i.photo.url }}" class="card-img-top" alt="team-member" height="150px" ></a>
+            <span class="text-left bg-accent font-weight-bold">
+              Featured
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{i.name}}</h5>
+            <p class="card-text">{{i.topic}}</p>
+            <div class="person-description mt-2">
+              <a href=""><button  class="btn btn-accent"> Lets Learn</button></a>
+
+            </div>
+           
+          </div>
+        </div>
+        {% endfor %}
+
+
+        
+
+
+
+      </div>
+
+      <div class="controls d-flex justify-content-center mt-2 mb-2">
+        <div class="d-flex">
+          <i class="fa fa-angle-left youtuber-left"></i>
+          <i class="fa fa-angle-right youtuber-right"></i>
+        </div>
+      </div>
+    </section>
+
+
+
+
+ 
+
+
+
+
+<section class="container mt-3">
+      <h3 class="text-center">interview preperation</h3>
+      <p class="pt-2 pb-3 text-center">online Resourses</p>
+      <div class="team slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+
+        <!-- team 1 -->
+        {% for team in teams%}
+        <div class="card border-0 text-center  ml-3 mr-3" id="team">
+          <img src="{{ team.photo.url }}" class="card-img-top"  alt="team-member">
+          <div class="card-body">
+            <h5 class="card-title">{{team.platform}} </h5>
+            <p class="card-text">{{team.conceptname}}</p>
+            <a href="{{team.conceptlink}}" class="btn btn-accent btn-block">Go somewhere</a>
+            <div class="text-center mt-2">
+              
+              
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+      <style>
+#team img{
+  height: 250px;
+}
+      </style>
+
+
+      <div class="controls d-flex justify-content-center mt-2 mb-2">
+        <div class="d-flex">
+          <i class="fa fa-angle-left team-left"></i>
+          <i class="fa fa-angle-right team-right"></i>
+        </div>
+      </div>
+    </section>
+  </main>

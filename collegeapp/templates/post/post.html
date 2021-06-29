@@ -1,0 +1,39 @@
+{% extends 'webpages/base.html'%}
+{% load static%}
+{% block content%}
+
+        <div class="post1">
+            <h3>post something</h3>
+            <div class="col-md-6 mb-2 " id="some">
+                <form method="POST" action="{% url 'postsub' %}">
+                  {% csrf_token %}
+                  <div class="form-row">
+                    <div class="form-group col-lg-6">
+                      <input name="fullname" type="text" class="form-control" placeholder="fullname">
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <input name="branch" type="text" class="form-control" placeholder="branch">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-lg-6">
+                      <input  name="topic" type="text" class="form-control" placeholder="topic">
+                    </div>
+                    
+                  </div>
+                  <div class="form-group">
+                    <input name="subject1" type="text" class="form-control" placeholder="Subject">
+                  </div>
+                  <div class="form-group pt-2">
+                    <textarea name="details"  class="form-control" rows="3" placeholder="Detailed Message"></textarea>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-accent">post</button>
+                  </div>
+      
+                </form>
+              </div>
+        </div>
+       
+
+{% endblock %}

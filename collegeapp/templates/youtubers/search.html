@@ -1,0 +1,63 @@
+{% extends 'webpages/base.html'%}
+{% load static %}
+
+{% block content%}
+
+  <main class="searchpage">
+    <div class="banner">
+      <img src="{% static './assets/images/background.jpg' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+       
+      </h1>
+    </div>
+
+    <section class="searchbox container mt-5 p-3 bg-accent">
+      <form method="GET" action="{% url 'search' %}">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <select name="name" id="inputState" class="form-control">
+              {% for i in namesearch %}
+              <option selected disabled hidden>{{i}}</option>
+              <option>{{i}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          
+        </div>
+        <div class="text-center">
+
+          <button class="btn btn-light">Search</button>
+        </div>
+      </form>
+      
+    </section>
+
+
+
+    <section class="search-results container mt-3 grid">
+
+
+{% for i in tuber %}
+            <!-- person 1 -->
+            <div class="card border-0 text-center">
+              <div class="feature-text">
+                
+                <a href="{% url 'tubersdetails' i.id %}"><img src="{{i.photo.url}}" class="card-img-top" alt="team-member" style="height: 250px;"></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <p class="card-text">{{i.role}}</p>
+                <div class="person-description mt-2">
+                
+                </div>
+                
+              </div>
+            </div>
+          {% endfor %}
+
+
+    </section>
+  </main>
+
+
+{%  endblock %}

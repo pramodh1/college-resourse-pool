@@ -1,0 +1,69 @@
+{% extends 'webpages/base.html'%}
+{% load static%}
+{% block content%}
+  <main class="tubers-page">
+    <div class="banner">
+      <img src="{% static './assets/images/background.jpg' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+        Courses
+      </h1>
+    </div>
+<style>
+
+  .banner img{
+    opacity: 70%;
+  }
+</style>
+    <section class="container mt-5 mb-5">
+      <div class="row ">
+        <div class="col-lg-8 mb-2 ">
+          <section class="tubers">
+
+
+{% for i in youtuber%}
+            <!-- person 1 -->
+            <div class="card border-0 text-center">
+              <div class="feature-text">
+                
+                <a href="{% url 'tubersdetails' i.id %}"><img src="{{i.photo.url}}" class="card-img-top" alt="team-member" height="200px"></a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <p class="card-text">{{i.role}}</p>
+                <div class="person-description mt-2">
+                  <a href="{{i.vediourl}}"><button class="btn btn-accent"> start Learning  </button></a>
+
+                </div>
+                
+              </div>
+            </div>
+          {% endfor %}
+
+
+
+
+          </section>
+        </div>
+
+
+    </section>
+    <style>
+      section{
+        text-align: center;
+       
+      }
+    </style>
+
+ 
+  </main>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

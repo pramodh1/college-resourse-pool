@@ -1,0 +1,118 @@
+{% extends 'webpages/base.html'%}
+{% load static %}
+
+{% block content %}
+
+  <main class="contact-us">
+    <div class="banner">
+      <img src="{% static './assets/images/slide5.jpg' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center" style="color: black;">
+        About Us
+      </h1>
+    </div>
+    <section class="container mt-5 mb-5">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <img src="{%  static './assets/images/background.jpg' %}" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-8 animate__animated animate__fadeInRight">
+          <h2 class="text-center">About VIIT</h2>
+          <p>Vignan's Institute of Information Technology (VIIT) was established in 2002 in the City of Destiny, Visakhapatnam, to cater to the educational needs of the general public. It acquired Autonomous status in the year 2017 and NBA and NAAC(A+) accredited Institute. The experience gained by Vignan through its earlier institutions at Guntur has only helped in establishing very
+           high quality standards right from the inception and also is one of the reasons for the success.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-5">
+
+        <div class="col-md-8  animate__animated animate__fadeInLeft  animate__delay-1s">
+          <h2 class="text-center">About chairman</h2>
+          <p>Well Thought-out Reforms In Technical Education Is The Need Of The Hour" We, in India today, are living in a transitional era. On one hand, we are swamped by the global financial meltdown while on the other; we are witnessing a slow but sure revival of the manufacturing and agricultural sectors. It is evident that highly trained and skilled professionals will be needed in vast numbers to enable our country's transition towards industrial and financial self-sufficiency. In this changing scenario, technology will continue to be a major catalyst for enabling the country's transformation .So the demand for quality technical education in India is huge.
+
+In Andhra Pradesh, we often mention with pride that the state has the largest number of technical/professional institutions to impart skill based education to fulfill the needs of the industry. But the fact remains that, in spite of the large number of engineers churned out from the 300 and odd colleges every year, there continues to be an unbridgeable gap between the needs of the Industry and the skill set that the engineering students possess. Thus we are faced with a paradoxical situation where employers keep scouting for employees and vice versa.
+
+The problem is not difficult to analyze. In spite of possessing impressive infrastructure and high-tech labs, the quality of technical education imparted in most engineering colleges is woefully poor. Despite the proliferation of colleges, the demand for holistic engineering education remains as high as ever. A keen introspection by the administrative authorities both at the planning and executive level is needed to evolve effective supervisory and regulatory mechanisms so as to reinforce good standards of technical education. Unscrupulous practices compromising on the quality of education need to be checked. All engineering colleges in the state should vie with each other to develop wholesome systems contributing to innovative teaching - learning practices, which will upscale the educational standards in the state and serve the future generation of students in realizing their dreams. We at Vignan resolve to rededicate ourselves 
+to the cause of the nation the march towards Vision 2020, the dream of seeing India as a developed nation...
+          
+          
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="{%  static './assets/images/chairman.jpg' %}" alt="" class="img-fluid">
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-3">
+      <h3 class="text-center">Random Clicks</h3>
+      <p class="pt-2 pb-3 text-center">our events </p>
+      <div class="team slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
+
+        <!-- team 1 -->
+        <div class="card border-0 text-center  ml-3 mr-3">
+          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
+          <div class="card-body">
+
+            <div class="text-center mt-2">
+              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
+              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- team 1 -->
+        <div class="card border-0 text-center  ml-3 mr-3">
+          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
+          <div class="card-body">
+            <h5 class="card-title">Team Member One</h5>
+            <p class="card-text">Gaming</p>
+            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
+            <div class="text-center mt-2">
+              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
+              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- team 1 -->
+        <div class="card border-0 text-center  ml-3 mr-3">
+          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
+          <div class="card-body">
+            <h5 class="card-title">Team Member One</h5>
+            <p class="card-text">Gaming</p>
+            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
+            <div class="text-center mt-2">
+              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
+              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- team 1 -->
+        <div class="card border-0 text-center ml-3 mr-3">
+          <img src="https://placeimg.com/640/480/people" class="card-img-top" alt="team-member">
+          <div class="card-body">
+            <h5 class="card-title">Team Member One</h5>
+            <p class="card-text">Gaming</p>
+            <a href="#" class="btn btn-accent btn-block">Go somewhere</a>
+            <div class="text-center mt-2">
+              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
+              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="controls d-flex justify-content-center mt-2 mb-2">
+        <div class="d-flex">
+          <i class="fa fa-angle-left team-left"></i>
+          <i class="fa fa-angle-right team-right"></i>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock %}

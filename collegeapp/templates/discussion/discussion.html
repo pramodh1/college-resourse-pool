@@ -1,0 +1,17 @@
+{% extends 'webpages/base.html'%}
+{% load static %}
+{% load forms_tags %} 
+<html> 
+<head> 
+<title></title> 
+</head> 
+<body> 
+<form method="POST"> 
+	{% csrf_token %} 
+	{{comment_form.as_p}} 
+</form> 
+</body>
+
+{% block content %}
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends 'webpages/base.html'%}
+{% load static %}
+
+{% block content%}
+  <main class="single-page-tubers">
+    <div class="banner">
+      <img src="{%  static './assets/images/background.jpg' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center" style="color: black;">
+        {{ tuber.name}}
+      </h1>
+    </div>
+
+
+
+    <section class="head container mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <h1 class="text-center">{{tuber.name}}</h1>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <h1 class="text-accent text-center">
+            {{tuber.role}}
+          </h1>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <img src="{{tuber.photo.url}}" class="img-fluid" alt="team-member">
+        </div>
+      </div>
+    </section>
+    <section class="video container text-center">
+      <iframe width="560" height="315" src="{{tuber.vediourl}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+
+    <h3 style="margin-left: 30px;">Did you like it</h3>
+    <div class="like">
+      <i onclick="myFunction(this)" class="fa fa-thumbs-up" style="font-size: 2.73em;"></i>
+    </div>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
+      }
+    </script>
+    <section class="descritpion container">
+      <h4>Descritpion</h4>
+      <p class="mt-2 mb-2">{{tuber.description | safe}}</p>
+
+      <p>Lorem
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure laudantium in totam magnam at earum quibusdam
+        repellat perspiciatis modi explicabo! Quidem cumque veniam magnam aperiam nihil voluptatem illo velit? Nam!
+        ipsum dolor sit amet consectetur adipisicing elit. Alias tempora obcaecati ab, repellat quas, magnam
+        similique veritatis harum hic iste sed qui quos, voluptatibus veniam?</p>
+
+
+    </section>
+
+    <section class="container w-50">
+
+      
+      
+
+    </section>
+
+
+
+  </main>
+
+{% endblock %}    
+<style>
+      @media (max-width:991px) {
+        iframe{
+          width: 100%;
+        }
+        
+      }
+
+      .like i{
+        
+        margin-left: 100px;
+      }
+    </style>

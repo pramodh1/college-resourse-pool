@@ -1,0 +1,44 @@
+{% extends 'webpages/base.html'%}
+{% load static %}
+<h1>contests</h1>
+{% block content %}
+<h1>contests</h1>   
+<div class="events">
+    {% for card in event %}
+<div class="card" style="width: 100%;">
+  
+  <div class="card-body" style="background: rgb(97, 90, 90);" >
+    <h5 class="card-title">Topic:{{card.topic}}</h5>
+    <div class="con">
+    <p class="card-text">platform:{{card.platform}}</p>
+    <div class="start">
+        <p>START :{{card.start_date_time}}</p> <p>END :{{card.end_date_time}}</p>
+    </div>
+    <a href="https://{{card.link}}" class="btn btn-primary">Lets Go</a>
+  </div></div>
+</div>
+
+{% endfor %}
+
+</div>
+<style>
+.events{
+
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+.card{
+    margin-bottom: 10px;
+    text-align: center;
+    color: wheat;
+}
+
+</style>
+{% endblock %}
